@@ -23,33 +23,109 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
+      .container {
+  display:grid;
+  height:100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "main main main rating1 rating1 rating1"
+    "main main main rating2 rating2 rating2"
+    "main main main rating3 rating3 rating3"
+    "review1 review1 review2 review2 review3 review3"
+    "review1 review1 review2 review2 review3 review3"
+    "review1 review1 review2 review2 review3 review3";
+  grid-gap: 0.2rem;
+}
+
+main {
+  background: pink;
+  grid-area: main;
+}
+
+#rating1 {
+  background: lightblue;
+  grid-area: rating1;
+}
+
+#rating2 {
+  background: blue;
+  grid-area: rating2;
+}
+
+#rating3 {
+  background: darkblue;
+  grid-area: rating3;
+}
+
+#review1 {
+  background: lightgreen;
+  grid-area: review1;
+}
+
+#review2 {
+  background: green;
+  grid-area: review2;
+}
+
+#review3 {
+  background: darkgreen;
+  grid-area: review3;
+}
+
+@media only screen and (max-width:550px) {
+  .container {
+  display:grid;
+  height:100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 17% 17% 17% 50% 50% 50%;
+  grid-template-areas:
+    "main"
+    "rating1"
+    "rating2"
+    "rating3"
+    "review1"
+    "review2"
+    "review3";
+  grid-gap: 0.2rem;
+}
+}
     </style>
   </head>
   <body>
-    10,000+ of our users love our products.
 
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
+    <div class="container">
+      <main>
+        10,000+ of our users love our products.
+
+        We only provide great products combined with excellent customer service.
+        See what our satisfied customers are saying about our services.</main>
+
+      <div id="rating1">Rated 5 Stars in Reviews</div>
+
+      <div id="rating2">Rated 5 Stars in Report Guru</div>
+
+      <div id="rating3">Rated 5 Stars in BestTech</div>
+
+      <div id="review1">
+        Colton Smith 
+        Verified Buyer
+        "We needed the same printed design as the one we had ordered a week prior.
+        Not only did they find the original order, but we also received it in time.
+        Excellent!"</div>
+
+      <div id="review2">
+        Irene Roberts 
+        Verified Buyer
+        "Customer service is always excellent and very quick turn around. Completely
+        delighted with the simplicity of the purchase and the speed of delivery."</div>
+      <div id="review3">
+        Anne Wallace 
+        Verified Buyer
+        "Put an order with this company and can only praise them for the very high
+        standard. Will definitely use them again and recommend them to everyone!"</div>
+    </div>
 
     <div class="attribution">
       Challenge by

@@ -17,9 +17,10 @@ body {
 }
 
 .container {
+  padding: 75px 75px 70px 75px;
   display:grid;
-  height:100vh;
-  width: 100vw;
+  width: 1440px;
+  height: 735px;
   margin: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -36,64 +37,96 @@ body {
 
 main {
   grid-area: main;
-  color: hsl(300, 43%, 22%);
   font-weight: 500;
+  padding-right: 130px;
+  line-height: 1.5;
 }
 
 #rating1 {
   grid-area: rating1;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  background-color: #F7F2F8;
+  padding: 15px 50px 15px 20px;
+  border-radius: 10px;
+  height: fit-content;
+  margin-left: 5px;
+  margin-right: 190px;
 }
 
 #rating2 {
   grid-area: rating2;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  background-color: #F7F2F8;
+  padding: 15px 50px 15px 20px;
+  border-radius: 10px;
+  height: fit-content;
+  margin-left: 45px;
+  margin-right: 150px;
 }
 
 #rating3 {
   grid-area: rating3;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  background-color: #F7F2F8;
+  padding: 15px 50px 15px 20px;
+  border-radius: 10px;
+  height: fit-content;
+  margin-left: 85px;
+  margin-right: 110px;
 }
 
 #review1 {
   grid-area: review1;
   background-color: hsl(300, 43%, 22%);
   color: hsl(300, 24%, 96%);
-  border-radius: 3%;
-  margin-top: 5%;
-  margin-left: 5%;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: 0%;
   margin-right: 5%;
-  margin-bottom: 15%;
+  margin-bottom: 45px;
 }
 
 #review2 {
   grid-area: review2;
   background-color: hsl(300, 43%, 22%);
   color: hsl(300, 24%, 96%);
-  border-radius: 3%;
-  margin-top: 10%;
+  border-radius: 10px;
+  margin-top: 25px;
   margin-left: 5%;
   margin-right: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 25px;
 }
 
 #review3 {
   grid-area: review3;
   background-color: hsl(300, 43%, 22%);
   color: hsl(300, 24%, 96%);
-  border-radius: 3%;
-  margin-top: 15%;
+  border-radius: 10px;
+  margin-top: 45px;
   margin-left: 5%;
   margin-right: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 5px;
 }
 
-h1 {
+.title {
   color: hsl(300, 43%, 22%);
   font-weight: 700;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.subtitle {
+  padding-top: 10px;
+  color: #908990;
 }
 
 .customer-name {
   color:hsl(0, 0%, 100%);
   font-weight: 500;
-  padding-top: 8%;
+  padding-top: 15px;
 }
 
 .verified-buyer {
@@ -106,14 +139,21 @@ h1 {
   width: 60px;
   float: left;
   padding: 10px;
-  margin: 5%;
+  margin: 10px 10px 10px 20px;
   margin-bottom: 0px;
 }
 
 .customer-review {
-  margin-top: 8%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.rating-text {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media only screen and (max-width:550px) {
@@ -147,42 +187,42 @@ body {
 
     <div class="container">
       <main>
-        <h1>10,000+ of our users love our products.</h2>
+        <div class="title">10,000+ of our users love our products.</div>
 
-        We only provide great products combined with excellent customer service.
-        See what our satisfied customers are saying about our services.</main>
+        <div class="subtitle">We only provide great products combined with excellent customer service.
+        See what our satisfied customers are saying about our services.</div></main>
 
       <div id="rating1"> 
         <script>
           for (var i = 0; i < 5; i++) {
-            document.write("<img src='images/icon-star.svg'>");
+            document.write("<img src='images/icon-star.svg'>  ");
           }
         </script>
-        Rated 5 Stars in Reviews</div>
+            <span class="rating-text">Rated 5 Stars in Reviews</span></div>
 
       <div id="rating2">
         <script>
           for (var i = 0; i < 5; i++) {
-            document.write("<img src='images/icon-star.svg'>");
+            document.write("<img src='images/icon-star.svg'>  ");
           }
         </script>
-        Rated 5 Stars in Report Guru</div>
+            <span class="rating-text">Rated 5 Stars in Report Guru</span></div>
 
       <div id="rating3">
         <script>
           for (var i = 0; i < 5; i++) {
-            document.write("<img src='images/icon-star.svg'>");
+            document.write("<img src='images/icon-star.svg'>  ");
           }
         </script>
-        Rated 5 Stars in BestTech</div>
+        <span class="rating-text">Rated 5 Stars in BestTech</span></div>
 
       <div id="review1">
-        <img class="customer-img" src="images/image-colton.jpg">
+        <p><img class="customer-img" src="images/image-colton.jpg">
         <div class="customer-name">Colton Smith </div>
-        <div class="verified-buyer">Verified Buyer</div>
-        "We needed the same printed design as the one we had ordered a week prior.
+        <div class="verified-buyer">Verified Buyer</div></p>
+        <p class="customer-review">"We needed the same printed design as the one we had ordered a week prior.
         Not only did they find the original order, but we also received it in time.
-        Excellent!"</div>
+        Excellent!"</p></div>
 
       <div id="review2">
         <p><img class="customer-img" src="images/image-irene.jpg">

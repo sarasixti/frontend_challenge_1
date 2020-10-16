@@ -156,7 +156,7 @@ main {
     padding: 5px 5px 5px 5px;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 250px 65px 65px 65px 250px 250px 250px;
+    grid-template-rows: 250px 75px 75px 75px 250px 250px 250px;
     grid-template-areas:
       "main"
       "rating1"
@@ -213,10 +213,19 @@ main {
 
   .rating {
     font-size: 15px;
+    font-weight: 400;
   }
 
   .review {
     font-size: 15px;
+  }
+
+  .customer-img {
+    margin: 5px 5px 5px 20px;
+  }
+
+  .star {
+    width: 5px;
   }
 
 }
@@ -234,7 +243,7 @@ main {
       <div id="rating1" class="rating"> 
         <script>
           for (var i = 0; i < 5; i++) {
-            document.write("<img src='images/icon-star.svg'>  ");
+            document.write("<img class='star' src='images/icon-star.svg'>  ");
           }
         </script>
             <span class="rating-text">Rated 5 Stars in Reviews</span></div>
@@ -242,7 +251,7 @@ main {
       <div id="rating2" class="rating">
         <script>
           for (var i = 0; i < 5; i++) {
-            document.write("<img src='images/icon-star.svg'>  ");
+            document.write("<img class='star' src='images/icon-star.svg'>  ");
           }
         </script>
             <span class="rating-text">Rated 5 Stars in Report Guru</span></div>
@@ -250,7 +259,7 @@ main {
       <div id="rating3" class="rating">
         <script>
           for (var i = 0; i < 5; i++) {
-            document.write("<img src='images/icon-star.svg'>  ");
+            document.write("<img class='star' src='images/icon-star.svg'>  ");
           }
         </script>
         <span class="rating-text">Rated 5 Stars in BestTech</span></div>
